@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lanchonete da Laysa</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header>
+        <h1>(911Lanches)</h1>
+        <button id="cart-btn">🛒 Carrinho (<span id="cart-count">0</span>)</button>
+    </header>
+    <div class="top">
+        <img src="" alt="">
+    </div>
+
+
+    <section class="produtos">
+        <div class="produto">
+            <img src="/images/hamburguer.jpg" alt="Hamburguer">
+            <button onclick="addToCart('Hamburguer', 15)">Mais</button>
+        </div>
+        <div class="produto">
+            <img src="/images/batatas.jpg" alt="Batata Frita">
+            <button onclick="addToCart('Batata Frita', 10)">Mais</button>
+        </div>
+        <div class="produto">
+            <img src="/images/drink.jpg" alt="Refrigerante">
+            <button onclick="addToCart('Refrigerante', 7)">Mais</button>
+        </div>
+    </section>
+
+
+    <div class="estoque-hamb">
+        <div class="cards-container">
+            <div class="card">
+                <img src="/images/salada-removebg-preview.png" alt="Hamburguer 1">
+                <h2 class="titulo">Méqui Podrão</h2>
+                <div class="valor">R$ 25,00</div>
+                <div class="desc">Pão artesanal com alface americana, carne 180g e molho da casa.</div>
+            </div>
+            <div class="card">
+                <img src="/images/duplo-removebg-preview.png" alt="Hamburguer 2">
+                <h2 class="titulo">Duplo Giga</h2>
+                <div class="valor">R$ 19,00</div>
+                <div class="desc">Dois hambúrgueres, queijo e bacon crocante com maionese verde.</div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <aside id="cart">
+        <h2>🛒 Carrinho</h2>
+        <ul id="cart-items"></ul>
+        <p>Total: R$ <span id="cart-total">0</span>,00</p>
+    </aside>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
