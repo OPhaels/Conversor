@@ -14,9 +14,6 @@
         <button id="cart-btn">🛒 Carrinho (<span id="cart-count">0</span>)</button>
     </header>
 
-    <div class="top">
-        <img src="/lojinha/images/thum.jpg" alt="Banner Promocional">
-    </div>
 
     <section class="produtos">
         <div class="produto">
@@ -37,6 +34,7 @@
         <h2>Seu Carrinho</h2>
         <ul id="cart-items"></ul>
         <p>Total: R$ <span id="cart-total">0</span></p>
+        <button>Finalizar Compra</button>
     </div>
 
 
@@ -65,15 +63,82 @@
                 <div class="valor">R$ 33,00</div>
                 <div class="desc">Pão artesanal, carne 180g, cheddar, alface, tomate, cebola e molho da casa. </div>
             </div>
+            <div class="card">
+                <p onclick="addToCart('Dumbledore', 33)" class="addtocart">+</p>
+                <img src="images/hamb-removebg-preview.png" alt="Hamburguer 3">
+                <h2 class="titulo">Duplo Giga</h2>
+                <div class="valor">R$ 33,00</div>
+                <div class="desc">Pão artesanal, carne 180g, cheddar, alface, tomate, cebola e molho da casa. </div>
+            </div>
+            <div class="card">
+                <p onclick="addToCart('Dumbledore', 33)" class="addtocart">+</p>
+                <img src="images/hamb-removebg-preview.png" alt="Hamburguer 3">
+                <h2 class="titulo">Duplo Giga</h2>
+                <div class="valor">R$ 33,00</div>
+                <div class="desc">Pão artesanal, carne 180g, cheddar, alface, tomate, cebola e molho da casa. </div>
+            </div>
+            <div class="card">
+                <p onclick="addToCart('Dumbledore', 33)" class="addtocart">+</p>
+                <img src="images/hamb-removebg-preview.png" alt="Hamburguer 3">
+                <h2 class="titulo">Duplo Giga</h2>
+                <div class="valor">R$ 33,00</div>
+                <div class="desc">Pão artesanal, carne 180g, cheddar, alface, tomate, cebola e molho da casa. </div>
+            </div>
         </div>
     </div>
+    <!-- ... (seu código acima permanece igual até aqui) -->
+
     <div class="categoria-items extras" style="display: none;">
-        <p>Batata frita crocante, molhos e acompanhamentos.</p>
-    </div>
-    <div class="categoria-items bebidas" style="display: none;">
-        <p>Refrigerantes e sucos geladinhos!</p>
+        <div class="cards-container">
+            <div class="card">
+                <p onclick="addToCart('Batata Frita Média', 10)" class="addtocart">+</p>
+                <img src="images/batata1.png" alt="Batata Frita Média">
+                <h2 class="titulo">Batata Frita Média</h2>
+                <div class="valor">R$ 10,00</div>
+                <div class="desc">Porção crocante de batata frita com sal especial da casa.</div>
+            </div>
+            <div class="card">
+                <p onclick="addToCart('Batata com Cheddar e Bacon', 15)" class="addtocart">+</p>
+                <img src="images/cheddar-bacon.png" alt="Batata Cheddar">
+                <h2 class="titulo">Batata Cheddar e Bacon</h2>
+                <div class="valor">R$ 15,00</div>
+                <div class="desc">Batata frita com cheddar cremoso e pedaços de bacon crocante.</div>
+            </div>
+            <div class="card">
+                <p onclick="addToCart('Onion Rings', 12)" class="addtocart">+</p>
+                <img src="images/onion-rings.png" alt="Onion Rings">
+                <h2 class="titulo">Onion Rings</h2>
+                <div class="valor">R$ 12,00</div>
+                <div class="desc">Aros de cebola empanados e fritos, super crocantes.</div>
+            </div>
+        </div>
     </div>
 
+    <div class="categoria-items bebidas" style="display: none;">
+        <div class="cards-container">
+            <div class="card">
+                <p onclick="addToCart('Coca-Cola Lata', 6)" class="addtocart">+</p>
+                <img src="images/coca-lata.png" alt="Coca-Cola Lata">
+                <h2 class="titulo">Coca-Cola Lata</h2>
+                <div class="valor">R$ 6,00</div>
+                <div class="desc">Lata 350ml geladinha, perfeita para acompanhar seu lanche.</div>
+            </div>
+            <div class="card">
+                <p onclick="addToCart('Suco Natural de Laranja', 8)" class="addtocart">+</p>
+                <img src="images/suco-laranja.png" alt="Suco de Laranja">
+                <h2 class="titulo">Suco de Laranja</h2>
+                <div class="valor">R$ 8,00</div>
+                <div class="desc">Suco 100% natural, feito na hora, sem adição de açúcar.</div>
+            </div>
+            <div class="card">
+                <p onclick="addToCart('Água Mineral', 4)" class="addtocart">+</p>
+                <img src="images/agua.png" alt="Água Mineral">
+                <h2 class="titulo">Água Mineral</h2>
+                <div class="valor">R$ 4,00</div>
+                <div class="desc">Garrafa 500ml de água mineral natural sem gás.</div>
+            </div>
+        </div>
+    </div>
 
     <aside id="cart">
         <h2>🛒 Carrinho</h2>
