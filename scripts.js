@@ -1,10 +1,10 @@
-function paraMaiusculo() {
+function Maiusculo() {
   const texto = document.getElementById("entrada").value;
   const resultado = texto.toUpperCase();
   document.getElementById("resultado").textContent = resultado;
 }
 
-function paraMinusculo() {
+function Minusculo() {
   const texto = document.getElementById("entrada").value;
   const resultado = texto.toLowerCase();
   document.getElementById("resultado").textContent = resultado;
@@ -16,7 +16,7 @@ function primeiraMaiuscula() {
   document.getElementById("resultado").textContent = resultado;
 }
 
-function textoInvertido() {
+function Invertido() {
   const texto = document.getElementById("entrada").value;
   const resultado = texto.split("").reverse().join("");
   document.getElementById("resultado").textContent = resultado;
