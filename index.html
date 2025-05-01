@@ -1,85 +1,37 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tecnologia e Inovações</title>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
 
 <body>
-    <header>
-        <h1>Inovações & Tecnologia</h1>
-        <p>Explorando o futuro com conhecimento e requinte</p>
-        <p id="msg">Atualizações todos os dias às 10 horas</p>
-    </header>
-    <nav>
-        <a href="#">Início</a>
-        <a href="#">Tecnologia</a>
-        <a href="#">Sobre nós</a>
-        <a href="#">Contatos</a>
-        <div class="whs">
-            <img src="https://cdn-icons-png.freepik.com/256/13051/13051741.png?semt=ais_hybrid" alt="">
-            <p id="cntt">Contate-nos!</p>
+    <!DOCTYPE html>
+    <html lang="pt-BR">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Conversor de Texto</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <h2>Conversor de Texto</h2>
+        <textarea id="entrada" placeholder="Digite seu texto aqui..." spellcheck="true"></textarea>
+        <div class="buttons">
+            <button onclick="paraMaiusculo()">Maiúsculas</button>
+            <button onclick="paraMinusculo()">Minúsculas</button>
+            <button onclick="primeiraMaiuscula()">Primeira Maiúscula</button>
+            <button onclick="textoInvertido()">Texto Invertido</button>
         </div>
-    </nav>
-    <main>
-        <article>
-            <div class="start">
-                <h2>Startup brasileira cria IA que traduz emoções em texto</h2>
-                <img src="https://fintech.com.br/app/uploads/2024/04/tecnologia-marketing-digital.webp"
-                    alt="Interface de inteligência artificial">
-                <a href="https://www.youtube.com/watch?v=O1U3RmaIY-A">Startup brasileira cria IA que traduz emoções em
-                    texto - Vídeo Explicativo</a>
-            </div>
-            <p>Uma startup nacional desenvolveu uma IA capaz de identificar emoções humanas a partir da voz e gerar
-                textos empáticos automaticamente.</p>
-            <p><strong>Fonte:</strong> Revista Tech Brasil, Youtube</p>
+        <div id="resultado"></div>
+        <button onclick="copiarTexto()">Copiar</button>
+    </body>
 
-        </article>
-
-        <article>
-            <div class="video">
-                <h2>Documentário revela o impacto da tecnologia de luxo no cotidiano</h2>
-                <iframe width="950" height="420" src="https://www.youtube.com/embed/atCbw3HOPDY?si=PO4unBTh4wG0uu4a"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-            <p>Produzido com imagens de alta definição e narrativa envolvente, o documentário "Tecnologia &
-                Requinte"
-                mostra como a inovação está presente nos detalhes do dia a dia de forma sofisticada.</p>
-            <p><strong>Fonte:</strong> Canal Inova+, Youtube</p>
-        </article>
-
-        <article>
-            <div class="start">
-                <h2>Veículos autônomos de luxo ganham espaço no mercado</h2>
-                <img src="https://cdn.aquelamaquina.pt/images/2017-03/img_944x629$2017_03_29_16_57_01_38584.jpg"
-                    alt="Carro autônomo de luxo">
-            </div>
-            <p>Com design elegante e tecnologia de ponta, os veículos autônomos premium estão conquistando
-                consumidores
-                que buscam conforto, segurança e modernidade.</p>
-            <p><strong>Fonte:</strong> AutoTech News</p>
-        </article>
-    </main>
-    <footer>
-        <p>&copy; 2025 Inovações & Tecnologia. Todos os direitos reservados.</p>
-    </footer>
-
-    <script>
-        document.querySelectorAll('nav a').forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                alert('Navegação ainda não implementada.');
-            });
-        });
-
-        document.getElementById('cntt')
-    </script>
+    </html>
+    <script src="scripts.js"></script>
 </body>
 
 </html>

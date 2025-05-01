@@ -1,120 +1,51 @@
-/* Cores gerais */
-:root {
-  --cor-escura: #183b4e;
-  --cor-verde-claro: #336d82;
-  --cor-verde-escuro: #94b4c1;
-}
 body {
-  font-family: "Roboto", sans-serif;
-  margin: 0;
+  font-family: Arial, sans-serif;
   background-color: #f4f4f4;
-  color: #333;
-}
-
-header {
-  background-color: #222;
-  color: #fff;
-  padding: 1rem 2rem;
-  text-align: center;
-  font-family: "Merriweather", serif;
-}
-
-nav {
-  background-color: #333;
-  color: white;
   display: flex;
-  justify-content: center;
-  gap: 2rem;
-  padding: 1rem;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
 }
 
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
+textarea {
+  width: 300px;
+  height: 150px;
+  margin-bottom: 20px;
+  padding: 10px;
+  font-size: 16px;
 }
 
-main {
-  max-width: 1000px;
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
   margin: auto;
-  padding: 2rem;
 }
 
-article {
-  margin-bottom: 3rem;
-  background: white;
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-#msg {
-  font-size: 8pt;
-  text-align: right;
-  margin: 0;
-  padding: 0;
-}
-
-article h2 {
-  font-family: "Merriweather", serif;
-  color: #222;
-}
-
-article img {
-  width: 100%;
-  border-radius: 6px;
-  margin: 1rem 0;
-}
-
-footer {
-  background-color: #222;
-  color: white;
+button {
   text-align: center;
-  padding: 1rem;
-  margin-top: 2rem;
-}
-
-.whs img {
-  transition: transform 0.5s ease;
-  border-radius: 100%;
-  width: 60px;
-  position: absolute;
-  display: inline;
-  left: 95px;
-  top: 120px;
-}
-
-.whs img:hover {
+  padding: 10px;
+  width: 200px;
+  margin: 10px 20px;
+  font-size: 14px;
+  border: none;
+  background-color: #007bff;
+  color: white;
   cursor: pointer;
-  animation: aumentar 2000ms ease;
+  border-radius: 5px;
+  transition: background 0.3s;
 }
 
-.video,
-.start {
-  text-align: center;
+button:hover {
+  background-color: #0056b3;
 }
 
-@keyframes aumentar {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.2);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-article p {
-  margin: 20px;
-}
-
-.whs p {
-  color: white;
-  position: absolute;
-  display: none;
-  font-size: 10pt;
-  left: 160px;
-  top: 120px;
+#resultado {
+  width: 300px;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  min-height: 50px;
+  white-space: pre-wrap;
 }
