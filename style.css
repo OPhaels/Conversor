@@ -4,318 +4,117 @@
   --cor-verde-claro: #336d82;
   --cor-verde-escuro: #94b4c1;
 }
-
 body {
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: "Roboto", sans-serif;
   margin: 0;
-  padding: 0;
-  background: #f5efe7;
-  animation: fadeIn 0.5s ease-in;
+  background-color: #f4f4f4;
+  color: #333;
 }
 
 header {
-  background: var(--cor-escura);
-  color: white;
-  padding: 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transition: background 0.3s;
-}
-
-.logo {
-  background-image: url(/lojinha/images/logo1.jpeg);
-  width: 80px;
-  height: 80px;
-  border-radius: 10px;
-  background-position: center;
-  background-size: cover;
-}
-
-/* Produtos */
-.produtos {
-  display: flex;
+  background-color: #222;
+  color: #fff;
+  padding: 1rem 2rem;
   text-align: center;
-  gap: 1rem;
-  padding: 1rem;
-  flex-wrap: wrap;
+  font-family: "Merriweather", serif;
+}
+
+nav {
+  background-color: #333;
+  color: white;
+  display: flex;
   justify-content: center;
-  transition: transform 0.5s;
+  gap: 2rem;
+  padding: 1rem;
 }
 
-.produto {
-  margin: 10px;
-  text-align: center;
-  transition: transform 0.3s;
-}
-
-.produto img {
-  width: 80%;
-  height: 300px;
-  background-position: center;
-  background-repeat: no-repeat;
-  border-radius: 10px;
-  margin-bottom: -50px;
-  box-shadow: 0 2px 12px black;
-  transition: transform 0.3s;
-}
-
-button,
-#cart-btn {
-  background: var(--cor-verde-claro);
+nav a {
   color: white;
-  border: none;
-  padding: 10px 30px;
-  border: solid 1px;
-  cursor: pointer;
-  border-radius: 8px;
-  transition: background 0.3s ease, transform 0.3s;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-button:hover,
-#cart-btn:hover {
-  background: var(--cor-verde-escuro);
-  transform: scale(1.02);
-}
-
-/* Carrinho */
-#cart {
-  position: fixed;
-  right: 15px;
-  top: 80px;
-  border-radius: 10px;
-  background: white;
-  border-left: 2px solid var(--cor-verde-claro);
+main {
+  max-width: 1000px;
+  margin: auto;
   padding: 2rem;
-  width: 250px;
-  display: none;
-  box-shadow: -2px 0 10px #ccc;
-  transition: transform 0.3s;
 }
 
-#cart h2 {
-  margin-top: 0;
-}
-
-#cart-items {
-  list-style: none;
-  padding: 20px;
-  margin: 0;
-}
-
-/* Estoque Hamburguer */
-.estoque-hamb {
-  width: 98%;
-  margin: 20px auto;
-  border-radius: 10px;
-  background: var(--cor-escura);
-  overflow-x: auto;
-  padding: 10px;
-}
-
-/* Cards */
-.cards-container {
-  background: var(--cor-escura);
-  box-shadow: 0 2px 12px rgb(0, 0, 0);
-  border-radius: 10px;
-  display: flex;
-  gap: 20px;
-  margin: 30px;
-  justify-content: center;
-  min-width: fit-content;
-  animation: fadeIn 0.5s ease-in;
-}
-
-/* Card */
-.card {
-  border-radius: 15px;
-  padding: 10px;
-  text-align: center;
-  transition: all 0.3s ease;
-  position: relative;
-  animation: fadeIn 0.5s ease-in;
-}
-
-.card img {
-  width: 80%;
-  height: auto;
-  object-fit: contain;
-  border-radius: 10px;
-  filter: brightness(0.3);
-  transition: all 0.4s ease;
-}
-
-.card.hovered img {
-  filter: brightness(1.2) drop-shadow(0 0 10px #ffffffaa);
-}
-
-.card:hover img {
-  filter: brightness(1.2);
-}
-
-.card .titulo,
-.card .valor,
-.card .desc {
-  color: white;
-}
-
-.card .titulo,
-.card .valor {
-  font-size: 18px;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-  z-index: 1;
-  position: relative;
-}
-
-.card .desc {
-  font-size: 14px;
-  opacity: 0;
-  transform: translateY(10px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  z-index: 1;
-  position: relative;
-}
-
-.card:hover .titulo,
-.card:hover .valor {
-  transform: translateY(-10px);
-}
-
-.card:hover .desc {
-  opacity: 1;
-  transform: translateY(0px);
-}
-
-/* Botão de adicionar */
-.addtocart {
+article {
+  margin-bottom: 3rem;
   background: white;
-  width: 20px;
-  height: 20px;
-  padding: 5px;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#msg {
+  font-size: 8pt;
+  text-align: right;
+  margin: 0;
+  padding: 0;
+}
+
+article h2 {
+  font-family: "Merriweather", serif;
+  color: #222;
+}
+
+article img {
+  width: 100%;
+  border-radius: 6px;
+  margin: 1rem 0;
+}
+
+footer {
+  background-color: #222;
+  color: white;
   text-align: center;
-  border-radius: 5px;
-  line-height: 20px;
-  margin: 5px auto auto auto;
-  color: purple;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+.whs img {
+  transition: transform 0.5s ease;
+  border-radius: 100%;
+  width: 60px;
+  position: absolute;
+  display: inline;
+  left: 95px;
+  top: 120px;
+}
+
+.whs img:hover {
   cursor: pointer;
-  font-size: 20pt;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  transition: transform 0.3s;
+  animation: aumentar 2000ms ease;
 }
 
-.addtocart:hover {
-  transform: scale(1.2);
+.video,
+.start {
+  text-align: center;
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-  .cards-container,
-  .produtos {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .produto,
-  .card {
-    width: 90%;
-  }
-
-  #cart {
-    position: static;
-    width: 100%;
-    box-shadow: none;
-    border-left: none;
-    border-top: 2px solid var(--cor-verde-escuro);
-  }
-
-  .top img {
-    height: 150px;
-  }
-}
-
-@media (max-width: 1024px) {
-  header {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .logo {
-    margin-bottom: 10px;
-  }
-
-  .top img {
-    height: 200px;
-    width: 98%;
-  }
-
-  .produto,
-  .card {
-    width: 45%;
-  }
-}
-
-@media (max-width: 480px) {
-  header {
-    padding: 0.5rem;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .logo {
-    width: 60px;
-    height: 60px;
-  }
-
-  .top {
-    padding: 0 0.5rem;
-  }
-
-  .top img {
-    height: 130px;
-    border-radius: 8px;
-  }
-
-  .produto,
-  .card {
-    width: 100%;
-    margin-bottom: 1rem;
-  }
-
-  .produto img,
-  .card img {
-    height: auto;
-  }
-
-  button,
-  #cart-btn {
-    padding: 0.8rem;
-    font-size: 1rem;
-    width: 100%;
-  }
-
-  #cart {
-    padding: 0.5rem;
-    font-size: 0.9rem;
-  }
-
-  .addtocart {
-    padding: 12px;
-    width: auto;
-    height: auto;
-    font-size: 1rem;
-  }
-
-  .cards-container {
-    gap: 10px;
-    padding: 0.5rem;
-  }
-}
-
-@keyframes fadeIn {
+@keyframes aumentar {
   0% {
-    opacity: 0%;
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
   }
   100% {
-    opacity: 100%;
+    transform: scale(1);
   }
+}
+
+article p {
+  margin: 20px;
+}
+
+.whs p {
+  color: white;
+  position: absolute;
+  display: none;
+  font-size: 10pt;
+  left: 160px;
+  top: 120px;
 }

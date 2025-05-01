@@ -4,149 +4,82 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lanchonete</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Tecnologia e Inovações</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <header>
-        <div class="logo"></div>
-        <button id="cart-btn">🛒 Carrinho (<span id="cart-count">0</span>)</button>
+        <h1>Inovações & Tecnologia</h1>
+        <p>Explorando o futuro com conhecimento e requinte</p>
+        <p id="msg">Atualizações todos os dias às 10 horas</p>
     </header>
-
-
-    <section class="produtos">
-        <div class="produto">
-            <img src="images/hamburguer.jpg" alt="Hamburguer">
-            <button onclick="showCategory('lanches')">Lanches</button>
+    <nav>
+        <a href="#">Início</a>
+        <a href="#">Tecnologia</a>
+        <a href="#">Sobre nós</a>
+        <a href="#">Contatos</a>
+        <div class="whs">
+            <img src="https://cdn-icons-png.freepik.com/256/13051/13051741.png?semt=ais_hybrid" alt="">
+            <p id="cntt">Contate-nos!</p>
         </div>
-        <div class="produto">
-            <img src="images/batatas.jpg" alt="Batata Frita">
-            <button onclick="showCategory('extras')">Extras</button>
-        </div>
-        <div class="produto">
-            <img src="images/drink.jpg" alt="Refrigerante">
-            <button onclick="showCategory('bebidas')">Bebidas</button>
-        </div>
-    </section>
+    </nav>
+    <main>
+        <article>
+            <div class="start">
+                <h2>Startup brasileira cria IA que traduz emoções em texto</h2>
+                <img src="https://fintech.com.br/app/uploads/2024/04/tecnologia-marketing-digital.webp"
+                    alt="Interface de inteligência artificial">
+                <a href="https://www.youtube.com/watch?v=O1U3RmaIY-A">Startup brasileira cria IA que traduz emoções em
+                    texto - Vídeo Explicativo</a>
+            </div>
+            <p>Uma startup nacional desenvolveu uma IA capaz de identificar emoções humanas a partir da voz e gerar
+                textos empáticos automaticamente.</p>
+            <p><strong>Fonte:</strong> Revista Tech Brasil, Youtube</p>
 
-    <div id="cart">
-        <h2>Seu Carrinho</h2>
-        <ul id="cart-items"></ul>
-        <p>Total: R$ <span id="cart-total">0</span></p>
-        <button>Finalizar Compra</button>
-    </div>
+        </article>
 
+        <article>
+            <div class="video">
+                <h2>Documentário revela o impacto da tecnologia de luxo no cotidiano</h2>
+                <iframe width="950" height="420" src="https://www.youtube.com/embed/atCbw3HOPDY?si=PO4unBTh4wG0uu4a"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <p>Produzido com imagens de alta definição e narrativa envolvente, o documentário "Tecnologia &
+                Requinte"
+                mostra como a inovação está presente nos detalhes do dia a dia de forma sofisticada.</p>
+            <p><strong>Fonte:</strong> Canal Inova+, Youtube</p>
+        </article>
 
+        <article>
+            <div class="start">
+                <h2>Veículos autônomos de luxo ganham espaço no mercado</h2>
+                <img src="https://cdn.aquelamaquina.pt/images/2017-03/img_944x629$2017_03_29_16_57_01_38584.jpg"
+                    alt="Carro autônomo de luxo">
+            </div>
+            <p>Com design elegante e tecnologia de ponta, os veículos autônomos premium estão conquistando
+                consumidores
+                que buscam conforto, segurança e modernidade.</p>
+            <p><strong>Fonte:</strong> AutoTech News</p>
+        </article>
+    </main>
+    <footer>
+        <p>&copy; 2025 Inovações & Tecnologia. Todos os direitos reservados.</p>
+    </footer>
 
-    <div class="categoria-items lanches" style="display: none;">
-        <div class="cards-container">
-            <div class="card">
-                <p onclick="addToCart('Méqui Podrão', 25)" class="addtocart">+</p>
-                <img src="images/salada-removebg-preview.png" alt="Hamburguer 1">
-                <h2 class="titulo">Méqui Podrão</h2>
-                <div class="valor">R$ 25,00</div>
-                <div class="desc">Pão artesanal com alface americana, carne 180g e molho da casa.</div>
-            </div>
+    <script>
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                alert('Navegação ainda não implementada.');
+            });
+        });
 
-            <div class="card">
-                <p onclick="addToCart('Duplo Giga', 19)" class="addtocart">+</p>
-                <img src="images/duplo-removebg-preview.png" alt="Hamburguer 2">
-                <h2 class="titulo">Duplo Giga</h2>
-                <div class="valor">R$ 19,00</div>
-                <div class="desc">Dois hambúrgueres, queijo e bacon crocante com maionese verde.</div>
-            </div>
-            <div class="card">
-                <p onclick="addToCart('Dumbledore', 33)" class="addtocart">+</p>
-                <img src="images/hamb-removebg-preview.png" alt="Hamburguer 3">
-                <h2 class="titulo">Duplo Giga</h2>
-                <div class="valor">R$ 33,00</div>
-                <div class="desc">Pão artesanal, carne 180g, cheddar, alface, tomate, cebola e molho da casa. </div>
-            </div>
-            <div class="card">
-                <p onclick="addToCart('Dumbledore', 33)" class="addtocart">+</p>
-                <img src="images/hamb-removebg-preview.png" alt="Hamburguer 3">
-                <h2 class="titulo">Duplo Giga</h2>
-                <div class="valor">R$ 33,00</div>
-                <div class="desc">Pão artesanal, carne 180g, cheddar, alface, tomate, cebola e molho da casa. </div>
-            </div>
-            <div class="card">
-                <p onclick="addToCart('Dumbledore', 33)" class="addtocart">+</p>
-                <img src="images/hamb-removebg-preview.png" alt="Hamburguer 3">
-                <h2 class="titulo">Duplo Giga</h2>
-                <div class="valor">R$ 33,00</div>
-                <div class="desc">Pão artesanal, carne 180g, cheddar, alface, tomate, cebola e molho da casa. </div>
-            </div>
-            <div class="card">
-                <p onclick="addToCart('Dumbledore', 33)" class="addtocart">+</p>
-                <img src="images/hamb-removebg-preview.png" alt="Hamburguer 3">
-                <h2 class="titulo">Duplo Giga</h2>
-                <div class="valor">R$ 33,00</div>
-                <div class="desc">Pão artesanal, carne 180g, cheddar, alface, tomate, cebola e molho da casa. </div>
-            </div>
-        </div>
-    </div>
-    <!-- ... (seu código acima permanece igual até aqui) -->
-
-    <div class="categoria-items extras" style="display: none;">
-        <div class="cards-container">
-            <div class="card">
-                <p onclick="addToCart('Batata Frita Média', 10)" class="addtocart">+</p>
-                <img src="images/batata1.png" alt="Batata Frita Média">
-                <h2 class="titulo">Batata Frita Média</h2>
-                <div class="valor">R$ 10,00</div>
-                <div class="desc">Porção crocante de batata frita com sal especial da casa.</div>
-            </div>
-            <div class="card">
-                <p onclick="addToCart('Batata com Cheddar e Bacon', 15)" class="addtocart">+</p>
-                <img src="images/cheddar-bacon.png" alt="Batata Cheddar">
-                <h2 class="titulo">Batata Cheddar e Bacon</h2>
-                <div class="valor">R$ 15,00</div>
-                <div class="desc">Batata frita com cheddar cremoso e pedaços de bacon crocante.</div>
-            </div>
-            <div class="card">
-                <p onclick="addToCart('Onion Rings', 12)" class="addtocart">+</p>
-                <img src="images/onion-rings.png" alt="Onion Rings">
-                <h2 class="titulo">Onion Rings</h2>
-                <div class="valor">R$ 12,00</div>
-                <div class="desc">Aros de cebola empanados e fritos, super crocantes.</div>
-            </div>
-        </div>
-    </div>
-
-    <div class="categoria-items bebidas" style="display: none;">
-        <div class="cards-container">
-            <div class="card">
-                <p onclick="addToCart('Coca-Cola Lata', 6)" class="addtocart">+</p>
-                <img src="images/coca-lata.png" alt="Coca-Cola Lata">
-                <h2 class="titulo">Coca-Cola Lata</h2>
-                <div class="valor">R$ 6,00</div>
-                <div class="desc">Lata 350ml geladinha, perfeita para acompanhar seu lanche.</div>
-            </div>
-            <div class="card">
-                <p onclick="addToCart('Suco Natural de Laranja', 8)" class="addtocart">+</p>
-                <img src="images/suco-laranja.png" alt="Suco de Laranja">
-                <h2 class="titulo">Suco de Laranja</h2>
-                <div class="valor">R$ 8,00</div>
-                <div class="desc">Suco 100% natural, feito na hora, sem adição de açúcar.</div>
-            </div>
-            <div class="card">
-                <p onclick="addToCart('Água Mineral', 4)" class="addtocart">+</p>
-                <img src="images/agua.png" alt="Água Mineral">
-                <h2 class="titulo">Água Mineral</h2>
-                <div class="valor">R$ 4,00</div>
-                <div class="desc">Garrafa 500ml de água mineral natural sem gás.</div>
-            </div>
-        </div>
-    </div>
-
-    <aside id="cart">
-        <h2>🛒 Carrinho</h2>
-        <ul id="cart-items"></ul>
-        <p>Total: R$ <span id="cart-total">0</span>,00</p>
-    </aside>
-
-    <script src="script.js"></script>
+        document.getElementById('cntt')
+    </script>
 </body>
 
 </html>
